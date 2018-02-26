@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="activity_normal_margin">16dp</dimen>
+    <dimen name="elevation_normal">4dp</dimen>
+</resources>

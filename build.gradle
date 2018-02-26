@@ -13,6 +13,23 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+    ext {
+        // dependencies versions
+        support = "27.0.2"
+        testSupport = "1.0.1"
+        espresso = "3.0.1"
+        constraintLayout = "1.0.2"
+        multidex = "1.0.2"
+        databindingCompiler = "3.0.1"
+        junit = "4.12"
+        mockito = "2.13.0"
+        json = "20171018"
+        dagger = "2.14.1"
+        rxjava = "2.1.9"
+        rxandroid = "2.0.1"
+        retrofit = "2.3.0"
+        stetho = "1.5.0"
+    }
 }
 
 allprojects {

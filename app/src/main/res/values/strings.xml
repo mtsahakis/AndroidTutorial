@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Android Tutorial</string>
+    <string name="get_weather_data">get weather data</string>
+    <string name="Response">response</string>
+    <string name="error">error</string>
 </resources>

@@ -1,0 +1,32 @@
+package com.tsahakis.androidtutorial.ui;
+
+
+import com.tsahakis.androidtutorial.data.WeatherItem;
+
+public interface WeatherContract {
+
+    interface View {
+
+        void showResponseContainer();
+
+        void hideResponseContainer();
+
+        void showErrorContainer();
+
+        void hideErrorContainer();
+
+        void displayData(WeatherItem weatherItems);
+
+        void displayError(String error);
+
+    }
+
+    interface Presenter {
+
+        void init();
+
+        void onButtonClicked();
+
+    }
+
+}
