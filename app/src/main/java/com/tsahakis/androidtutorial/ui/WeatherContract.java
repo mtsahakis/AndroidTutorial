@@ -27,6 +27,8 @@ public interface WeatherContract {
 
         void onButtonClicked();
 
+        void unsubscribe();
+
     }
 
 }

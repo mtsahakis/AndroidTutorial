@@ -17,7 +17,7 @@ buildscript {
         // dependencies versions
         support = "27.0.2"
         testSupport = "1.0.1"
-        multidex = "1.0.2"
+        multidex = "1.0.3"
         databindingCompiler = "3.0.1"
         junit = "4.12"
         mockito = "2.13.0"

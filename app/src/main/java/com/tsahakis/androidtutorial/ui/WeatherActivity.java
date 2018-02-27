@@ -6,10 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.tsahakis.androidtutorial.R;
+import com.tsahakis.androidtutorial.app.WeatherApplication;
 import com.tsahakis.androidtutorial.data.WeatherItem;
+import com.tsahakis.androidtutorial.data.WeatherRepository;
 import com.tsahakis.androidtutorial.databinding.ActivityWeatherBinding;
 
 import java.util.Locale;
+
+import io.reactivex.disposables.CompositeDisposable;
 
 public class WeatherActivity extends AppCompatActivity implements WeatherContract.View {
 
@@ -28,10 +32,20 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        mPresenter = new WeatherPresenter(this);
+        mPresenter = new WeatherPresenter(
+                this,
+                new WeatherRepository(((WeatherApplication) getApplication()).getWeatherApi()),
+                new CompositeDisposable());
         mPresenter.init();
 
         mBinding.getData.setOnClickListener((v) -> mPresenter.onButtonClicked());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mPresenter.unsubscribe();
     }
 
     @Override
