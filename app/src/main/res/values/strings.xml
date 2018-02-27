@@ -3,4 +3,9 @@
     <string name="get_weather_data">get weather data</string>
     <string name="Response">response</string>
     <string name="error">error</string>
+    <string name="temperature">temperature</string>
+    <string name="humidity">humidity</string>
+    <string name="pressure">pressure</string>
+    <string name="minimum_temperature">minimum temperature</string>
+    <string name="maximum_temperature">maximum temperature</string>
 </resources>

@@ -33,9 +33,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    packagingOptions {
-        exclude 'META-INF/LICENSE'
-    }
 }
 
 repositories {
@@ -49,20 +46,13 @@ dependencies {
     // test compile
     testImplementation "junit:junit:${rootProject.ext.junit}"
     testImplementation "org.mockito:mockito-core:${rootProject.ext.mockito}"
-    testImplementation "org.json:json:${rootProject.ext.json}"
     // android support lib
     implementation("com.android.support:design:${rootProject.ext.support}") {
-        exclude group: 'com.android.support', module: 'custometabs'
-    }
-    implementation("com.android.support.constraint:constraint-layout:${rootProject.ext.constraintLayout}") {
         exclude group: 'com.android.support', module: 'custometabs'
     }
     implementation "com.android.support:multidex:${rootProject.ext.multidex}"
 
     annotationProcessor "com.android.databinding:compiler:${rootProject.ext.databindingCompiler}"
-    // dagger
-    implementation "com.google.dagger:dagger:${rootProject.ext.dagger}"
-    annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.dagger}"
     // retrofit
     implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit}"
     implementation "com.squareup.retrofit2:adapter-rxjava2:${rootProject.ext.retrofit}"
@@ -71,7 +61,4 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:${rootProject.ext.rxjava}"
     // okhttp interceptor
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
-    // stetho for db abd network debugging
-    implementation "com.facebook.stetho:stetho:${rootProject.ext.stetho}"
-    implementation "com.facebook.stetho:stetho-okhttp:${rootProject.ext.stetho}"
 }

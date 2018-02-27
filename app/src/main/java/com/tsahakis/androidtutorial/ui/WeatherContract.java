@@ -15,7 +15,7 @@ public interface WeatherContract {
 
         void hideErrorContainer();
 
-        void displayData(WeatherItem weatherItems);
+        void displayData(WeatherItem weatherItem);
 
         void displayError(String error);
 
