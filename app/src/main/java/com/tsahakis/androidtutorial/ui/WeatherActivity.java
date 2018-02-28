@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.tsahakis.androidtutorial.R;
-import com.tsahakis.androidtutorial.app.WeatherApplication;
 import com.tsahakis.androidtutorial.api.WeatherItem;
+import com.tsahakis.androidtutorial.app.WeatherApplication;
 import com.tsahakis.androidtutorial.data.WeatherRepository;
 import com.tsahakis.androidtutorial.databinding.ActivityWeatherBinding;
 
@@ -66,11 +66,11 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
 
     @Override
     public void displayData(WeatherItem weatherItem) {
-        mBinding.temperature.setText(String.format(Locale.getDefault(), "%.2f", weatherItem.getTemp()));
+        mBinding.temperature.setText(getString(R.string.format_temperature, weatherItem.getTemp()));
         mBinding.humidity.setText(String.format(Locale.getDefault(), "%d", weatherItem.getHumidity()));
         mBinding.pressure.setText(String.format(Locale.getDefault(), "%d", weatherItem.getPressure()));
-        mBinding.tempMin.setText(String.format(Locale.getDefault(), "%.2f", weatherItem.getTempMin()));
-        mBinding.tempMax.setText(String.format(Locale.getDefault(), "%.2f", weatherItem.getTempMax()));
+        mBinding.tempMin.setText(getString(R.string.format_temperature, weatherItem.getTempMin()));
+        mBinding.tempMax.setText(getString(R.string.format_temperature, weatherItem.getTempMax()));
     }
 
     @Override

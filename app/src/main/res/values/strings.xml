@@ -8,4 +8,5 @@
     <string name="minimum_temperature">minimum temperature</string>
     <string name="maximum_temperature">maximum temperature</string>
     <string name="current_weather_data">current weather data</string>
+    <string name="format_temperature" translatable="false">%1.0f\u00B0</string>
 </resources>
