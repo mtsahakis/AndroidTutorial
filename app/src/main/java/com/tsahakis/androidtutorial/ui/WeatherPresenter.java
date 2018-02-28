@@ -19,8 +19,8 @@ public class WeatherPresenter implements WeatherContract.Presenter {
     private final CompositeDisposable mCompositeDisposable;
 
     public WeatherPresenter(@NonNull WeatherContract.View view,
-                     @NonNull WeatherRepository weatherRepository,
-                     @NonNull CompositeDisposable compositeDisposable) {
+                            @NonNull WeatherRepository weatherRepository,
+                            @NonNull CompositeDisposable compositeDisposable) {
         mView = view;
         mWeatherRepository = weatherRepository;
         mCompositeDisposable = compositeDisposable;
