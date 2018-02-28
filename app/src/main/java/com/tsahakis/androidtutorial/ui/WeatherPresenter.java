@@ -35,7 +35,7 @@ public class WeatherPresenter implements WeatherContract.Presenter {
     @Override
     public void onButtonClicked() {
         mCompositeDisposable.add(
-                mWeatherRepository.getWeatherItem()
+                mWeatherRepository.getWeather()
                         .flatMap(response -> Single.fromCallable(response::getWeatherItem))
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())

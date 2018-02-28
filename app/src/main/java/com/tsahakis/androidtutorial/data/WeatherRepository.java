@@ -18,7 +18,7 @@ public class WeatherRepository {
         mWeatherApi = weatherApi;
     }
 
-    public Single<WeatherResponse> getWeatherItem() {
+    public Single<WeatherResponse> getWeather() {
         return mWeatherApi.getWeatherItem(
                 WEATHER_LOCATION,
                 BuildConfig.OPEN_WEATHER_MAP_API_KEY,
