@@ -7,4 +7,16 @@ The following topics will be covered:
 2. Unit testing with Mockito
 3. HTTP requests with Retrofit
 4. Asynchronous programming with RxJava
+
+## Installation
+
+Clone the project and import it to Android Studio.
+ 
+During development we used latest stable version of Android Studio at the time.
+
+Please get an openweathermap.org API key and copy it to $HOME/.gradle/gradle.properties as follows:
+
+OpenWeatherMapApiKey="XXXX"
+
+
  
