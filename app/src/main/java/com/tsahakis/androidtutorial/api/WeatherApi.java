@@ -1,4 +1,4 @@
-package com.tsahakis.androidtutorial.data;
+package com.tsahakis.androidtutorial.api;
 
 
 import io.reactivex.Single;

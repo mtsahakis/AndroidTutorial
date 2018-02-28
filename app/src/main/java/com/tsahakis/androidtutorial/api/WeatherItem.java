@@ -1,4 +1,4 @@
-package com.tsahakis.androidtutorial.data;
+package com.tsahakis.androidtutorial.api;
 
 
 import com.google.gson.annotations.Expose;

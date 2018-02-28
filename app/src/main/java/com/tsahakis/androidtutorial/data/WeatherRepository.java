@@ -2,6 +2,8 @@ package com.tsahakis.androidtutorial.data;
 
 
 import com.tsahakis.androidtutorial.BuildConfig;
+import com.tsahakis.androidtutorial.api.WeatherApi;
+import com.tsahakis.androidtutorial.api.WeatherResponse;
 
 import io.reactivex.Single;
 

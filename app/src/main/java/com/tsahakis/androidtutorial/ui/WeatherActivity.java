@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.tsahakis.androidtutorial.R;
 import com.tsahakis.androidtutorial.app.WeatherApplication;
-import com.tsahakis.androidtutorial.data.WeatherItem;
+import com.tsahakis.androidtutorial.api.WeatherItem;
 import com.tsahakis.androidtutorial.data.WeatherRepository;
 import com.tsahakis.androidtutorial.databinding.ActivityWeatherBinding;
 

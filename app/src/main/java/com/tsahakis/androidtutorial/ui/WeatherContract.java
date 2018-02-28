@@ -1,7 +1,7 @@
 package com.tsahakis.androidtutorial.ui;
 
 
-import com.tsahakis.androidtutorial.data.WeatherItem;
+import com.tsahakis.androidtutorial.api.WeatherItem;
 
 public interface WeatherContract {
 

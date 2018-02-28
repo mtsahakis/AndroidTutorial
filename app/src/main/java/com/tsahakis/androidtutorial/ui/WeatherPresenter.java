@@ -3,9 +3,10 @@ package com.tsahakis.androidtutorial.ui;
 
 import android.support.annotation.NonNull;
 
+import com.tsahakis.androidtutorial.api.WeatherItem;
 import com.tsahakis.androidtutorial.data.WeatherRepository;
-import com.tsahakis.androidtutorial.data.WeatherResponse;
 
+import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableSingleObserver;
@@ -35,14 +36,15 @@ public class WeatherPresenter implements WeatherContract.Presenter {
     public void onButtonClicked() {
         mCompositeDisposable.add(
                 mWeatherRepository.getWeatherItem()
+                        .flatMap(response -> Single.fromCallable(response::getWeatherItem))
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribeWith(new DisposableSingleObserver<WeatherResponse>() {
+                        .subscribeWith(new DisposableSingleObserver<WeatherItem>() {
                             @Override
-                            public void onSuccess(WeatherResponse weatherResponse) {
+                            public void onSuccess(WeatherItem weatherItem) {
                                 mView.hideErrorContainer();
                                 mView.showResponseContainer();
-                                mView.displayData(weatherResponse.getWeatherItem());
+                                mView.displayData(weatherItem);
                             }
 
                             @Override

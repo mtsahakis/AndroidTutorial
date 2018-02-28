@@ -5,7 +5,7 @@ import android.app.Application;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.tsahakis.androidtutorial.data.WeatherApi;
+import com.tsahakis.androidtutorial.api.WeatherApi;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
