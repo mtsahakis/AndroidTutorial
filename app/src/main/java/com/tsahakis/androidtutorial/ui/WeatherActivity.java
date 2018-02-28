@@ -28,10 +28,6 @@ public class WeatherActivity extends AppCompatActivity implements WeatherContrac
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_weather);
         setSupportActionBar(mBinding.toolbar);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-
         mPresenter = new WeatherPresenter(
                 this,
                 new WeatherRepository(((WeatherApplication) getApplication()).getWeatherApi()),
